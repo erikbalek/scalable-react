@@ -7,23 +7,30 @@
 import React from 'react';
 
 import styles from './styles.css';
-import FontAwesome from 'react-fontawesome';
+import IconButton from '../IconButton';
+import { Link } from 'react-router';
 
-function AppBar({ toggleDrawer }) {
+function AppBar({ toggleDrawer, email }) {
+  const loginLink = email || (<Link to="/login" >Log in</Link>);
   return (
     <div className={styles.appBar}>
-      <div className={styles.iconButtton} onClick={toggleDrawer}>
-        <FontAwesome className={styles.icon} name="bars" />
-      </div>
+      <IconButton
+        buttonClass={styles.iconButton} onClick={toggleDrawer}
+        iconClass={styles.icon} icon="bars"
+      />
       <div className={styles.heading}>
         Coder daily
       </div>
-      <div className={styles.linkContainer}>Log in</div>
+      <div className={styles.linkContainer} >
+        {loginLink}
+      </div>
+
     </div>
   );
 }
 AppBar.propTypes = {
   toggleDrawer: React.PropTypes.func.isRequired,
+  email: React.PropTypes.string.isRequired,
 };
 
 export default AppBar;

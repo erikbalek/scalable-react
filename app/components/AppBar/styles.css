@@ -8,7 +8,7 @@
   color: white;
 }
 
-.iconButtton {
+.iconButton {
   .cursor: pointer;
   margin-right: 15px;
 }
@@ -24,6 +24,7 @@
 
 .linkContainer {
   font-size: 16px;
+  margin-top: 6px;
 }
 
 .heading {

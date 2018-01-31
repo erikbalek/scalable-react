@@ -1,0 +1,30 @@
+.textInput { /* stylelint-disable */
+
+}
+
+.input {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding: 5px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+  font-size: 18px;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: grey;
+    border-bottom-width: 2px;    
+  }
+}
+
+.errorMessage {
+  color: #ce1313;
+  padding: 10px 0 10px 0;
+  font-size: 14px;
+}
+
+.inputError {
+  border-bottom-color: red;
+}
