@@ -12,7 +12,7 @@ import styles from './styles.css';
 function IconButton({onClick, icon, iconClass, buttonClass}) {
   return (
     <div
-      className={classNames(styles.iconButtton, buttonClass)}
+      className={classNames(styles.iconButton, buttonClass)}
       onClick={onClick}>
       <FontAwesome className={iconClass} name={icon} />
     </div>
